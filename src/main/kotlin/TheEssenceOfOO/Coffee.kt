@@ -1,0 +1,5 @@
+package TheEssenceOfOO
+
+class Coffee {
+
+}
