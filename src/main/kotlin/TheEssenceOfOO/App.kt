@@ -5,5 +5,13 @@ package TheEssenceOfOO
 
 
 fun main(args: Array<String>) {
+    val menu = Menu()
+    val customer = Customer(menu, Barista())
+
     println("커피 전문점")
+    println("커피를 주문 하세요.")
+    println(menu.menuItems)
+
+    val coffeeName = readLine()
+    customer.order(coffeeName ?: "아메카노")
 }
