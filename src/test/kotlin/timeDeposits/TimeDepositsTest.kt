@@ -2,7 +2,6 @@ package timeDeposits
 
 import org.junit.Test
 import java.time.LocalDate
-import java.util.*
 import kotlin.test.assertEquals
 
 class TimeDepositsTest {
@@ -17,8 +16,12 @@ class TimeDepositsTest {
      * */
 
     @Test
-    fun `만기 해지할 경우 이자를 계산한다.`() {
-        val timeDeposit = TimeDeposit(36, LocalDate.of(2022, 1, 1))
+    fun `만기 해지할 경우 이자를 계산한다`() {
+        val timeDeposit = TimeDeposit(
+                36,
+                LocalDate.of(2022, 1, 1)
+        )
+
         val interest = timeDeposit.calculateInterest()
 
         assertEquals(36300, interest)
