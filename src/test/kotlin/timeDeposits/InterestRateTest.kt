@@ -3,7 +3,7 @@ package timeDeposits
 import org.junit.Test
 import kotlin.test.assertEquals
 
-class InterestRate() {
+class InterestRateTest() {
     @Test
     fun calculateInterest() {
         val interestRate = InterestRate(2.2)

@@ -20,7 +20,7 @@ class TimeDepositsTest {
         val timeDeposit = TimeDeposit(
                 36,
                 LocalDate.of(2022, 1, 1),
-                Account("0000-00-0000", 1000000)
+                Account("0000-00-0000", 1000000, InterestRate(2.2))
         )
 
         val interest = timeDeposit.calculateInterest()
