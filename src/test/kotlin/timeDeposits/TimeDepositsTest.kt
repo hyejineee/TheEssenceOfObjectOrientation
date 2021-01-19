@@ -19,7 +19,8 @@ class TimeDepositsTest {
     fun `만기 해지할 경우 이자를 계산한다`() {
         val timeDeposit = TimeDeposit(
                 36,
-                LocalDate.of(2022, 1, 1)
+                LocalDate.of(2022, 1, 1),
+                Account("0000-00-0000", 1000000)
         )
 
         val interest = timeDeposit.calculateInterest()
