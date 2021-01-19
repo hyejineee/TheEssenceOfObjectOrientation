@@ -1,4 +1,4 @@
-package TheEssenceOfOO
+package coffeeShop
 
 class Barista {
 

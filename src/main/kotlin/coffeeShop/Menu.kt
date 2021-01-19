@@ -1,4 +1,4 @@
-package TheEssenceOfOO
+package coffeeShop
 
 class Menu {
     val menuItems: List<MenuItem>
