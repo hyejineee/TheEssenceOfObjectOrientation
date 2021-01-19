@@ -3,7 +3,7 @@ package timeDeposits
 import java.time.LocalDate
 
 class TimeDeposit(
-        private val duration: Int,
+        private val expireDuration: Int,
         private val expireDate: LocalDate,
         private val account: Account
 ) {
