@@ -12,8 +12,9 @@ class TimeDeposit(
     fun calculateInterest(): Int = account.calculateInterest(expireDuration)
 
     fun calculateInterest(terminateDate: LocalDate): Int {
-        return account.calculateInterest(
-            expireDuration - Period.between(terminateDate, expireDate).toTotalMonths().toInt()
-        )
+        return account.calculateInterest(calculatePeriod(terminateDate))
     }
+
+    private fun calculatePeriod(terminateDate: LocalDate): Int =
+        expireDuration - Period.between(terminateDate, expireDate).toTotalMonths().toInt()
 }
