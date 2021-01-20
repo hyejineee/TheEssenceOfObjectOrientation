@@ -37,7 +37,7 @@ class TimeDepositsTest {
         )
 
         val interest = timeDeposit.calculateInterest(LocalDate.of(2021, 1, 1))
-        
+
         assertEquals(24200, interest)
     }
 
