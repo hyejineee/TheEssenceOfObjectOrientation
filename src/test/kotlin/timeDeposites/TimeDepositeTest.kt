@@ -1,4 +1,0 @@
-package timeDeposites
-
-class TimeDepositeTest {
-}
