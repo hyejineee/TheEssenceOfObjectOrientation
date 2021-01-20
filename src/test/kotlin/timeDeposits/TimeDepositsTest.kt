@@ -16,16 +16,29 @@ class TimeDepositsTest {
      * */
 
     @Test
-    fun `만기 해지할 경우 이자를 계산한다`() {
+    fun calculateInterestTest() {
         val timeDeposit = TimeDeposit(
-                36,
-                LocalDate.of(2022, 1, 1),
-                Account("0000-00-0000", 1000000, InterestRate(2.2))
+            36,
+            LocalDate.of(2022, 1, 1),
+            Account("0000-00-0000", 1000000, InterestRate(2.2))
         )
 
         val interest = timeDeposit.calculateInterest()
 
         assertEquals(36300, interest)
+    }
+
+    @Test
+    fun calculateInterestWhenMiddleTermination() {
+        val timeDeposit = TimeDeposit(
+            36,
+            LocalDate.of(2022, 1, 1),
+            Account("0000-00-0000", 1000000, InterestRate(2.2))
+        )
+
+        val interest = timeDeposit.calculateInterest(LocalDate.of(2021, 1, 1))
+        
+        assertEquals(24200, interest)
     }
 
 }
